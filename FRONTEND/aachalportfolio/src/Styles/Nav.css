@@ -1,0 +1,24 @@
+.nav-wrapper{
+    display: flex;
+    justify-content: end;
+}
+
+.nav-wrapper a{
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+}
+.nav-wrapper p {
+    border-style: solid;
+    background: none;
+    border-width: 20px; /* Set the width to the same as the hover state */
+    border-color: transparent; /* Make the initial border transparent */
+    transition: border 0.3s ease; /* Smooth transition for the border */
+}
+
+.nav-wrapper p:hover {
+    border-image: url(border.png) 30 fill; /* Apply the border image on hover */
+    border-image-slice: 30; /* Ensure proper slicing */
+    border-image-width: 25px; /* Match the initial border width */
+    border-color: none; /* Remove the transparent border */
+}

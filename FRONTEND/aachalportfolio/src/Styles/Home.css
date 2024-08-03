@@ -1,0 +1,13 @@
+
+
+.big-title{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+h1{
+  font-size: 7vw;
+  font-weight: 100;
+}
+

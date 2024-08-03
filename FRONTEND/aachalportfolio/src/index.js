@@ -1,12 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import './Styles/index.css';
+import Home from './Pages/Home';
+import Aboutme from './Pages/Aboutme';
+import Archive from './Pages/Archive';
+import Contact from './Pages/Contact';
+
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />
+  },
+  {
+    path: '/aboutme',
+    element: <Aboutme/>
+  },
+  {
+    path: '/archive',
+    element: <Archive/>
+  },
+  {
+    path: '/contact',
+    element: <Contact/>
+  }
+
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <RouterProvider router={router}/>
   </React.StrictMode>
 );
 

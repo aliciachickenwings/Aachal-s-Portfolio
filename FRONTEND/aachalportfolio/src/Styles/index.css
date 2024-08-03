@@ -5,9 +5,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #FBFAF4;
 }
 
+@font-face {
+  font-family: 'Gallery Modern';
+  src: url('../../public/Fonts/GalleryModern.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: 'Gallery Modern', sans-serif;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.outer-wrapper{
+  margin: 0% 5%;
 }
