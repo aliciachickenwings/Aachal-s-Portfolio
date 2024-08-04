@@ -1,14 +1,20 @@
-.nav-wrapper{
+.nav-elements {
+    position: fixed;
+    width: 100%;
     display: flex;
-    justify-content: end;
-}
+    flex-direction: column;
+    align-items: center;
+    background-color: #FBFAF4;
+    top: -100%; /* Start off-screen at the top */
+    transition: top 0.3s ease; /* Transition effect */
+    z-index: 9; /* Ensure it's above other elements */
+  }
 
-.nav-wrapper a{
+.nav-elements a{
     text-decoration: none;
     color: black;
-    margin-left: 20px;
 }
-.nav-wrapper p {
+.nav-elements p {
     border-style: solid;
     background: none;
     border-width: 20px; /* Set the width to the same as the hover state */
@@ -21,4 +27,53 @@
     border-image-slice: 30; /* Ensure proper slicing */
     border-image-width: 25px; /* Match the initial border width */
     border-color: none; /* Remove the transparent border */
+}
+
+.toggle-button{
+    position: absolute;
+    top: 1.00rem;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    z-index: 12;
+
+}
+
+.toggle-button .bar{
+    display: block;
+    z-index: 12;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.toggle-button.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 7.5px);
+  }
+  
+  .toggle-button.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .toggle-button.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -7.5px);
+  }
+
+  .nav-elements.active {
+    top: 2rem; /* Slide into view from the top */
+  }
+
+@media(min-width: 480px){
+    .toggle-button{
+        display: none;
+    }
+
+    .nav-elements{
+        flex-direction: row;
+    }
 }

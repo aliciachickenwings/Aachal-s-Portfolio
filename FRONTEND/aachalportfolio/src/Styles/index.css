@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #FBFAF4;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -17,11 +18,10 @@ body {
 
 h1 {
   font-family: 'Gallery Modern', sans-serif;
+  z-index: 1;
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
+
 
 .outer-wrapper{
   margin: 0% 5%;
