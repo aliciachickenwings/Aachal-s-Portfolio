@@ -3,6 +3,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding-top: 50px;
     align-items: center;
     background-color: #FBFAF4;
     top: -100%; /* Start off-screen at the top */
@@ -42,6 +43,8 @@
 
 }
 
+
+
 .toggle-button .bar{
     display: block;
     z-index: 12;
@@ -65,15 +68,29 @@
   }
 
   .nav-elements.active {
-    top: 2rem; /* Slide into view from the top */
+    top: 0; /* Slide into view from the top */
   }
 
 @media(min-width: 480px){
+/*     .toggle-button{
+        display: none;
+    } */
+
+}
+
+@media(min-width: 780px){
     .toggle-button{
         display: none;
     }
 
     .nav-elements{
+        top: 0;
         flex-direction: row;
+        justify-content: end;
+        background-color: transparent;
+    }
+
+    .nav-elements.active{
+        top: 0;
     }
 }
