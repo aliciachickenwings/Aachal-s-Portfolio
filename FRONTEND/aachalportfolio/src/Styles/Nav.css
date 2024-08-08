@@ -84,7 +84,7 @@
     }
 
     .nav-elements{
-        top: 0;
+        position: relative;
         flex-direction: row;
         justify-content: end;
         background-color: transparent;

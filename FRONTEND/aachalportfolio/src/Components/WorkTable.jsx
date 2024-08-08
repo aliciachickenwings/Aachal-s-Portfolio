@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import WorkTableRow from "./WorkTableRow";
 import "../Styles/WorkTable.css";
+import { fetchTags } from "../utils";
 
 function WorkTable() {
   const [isActive, setIsActive] = useState(false);
@@ -12,7 +13,7 @@ function WorkTable() {
   };
 
   useEffect(() => {
-    const fetchTags = async (tagIds) => {
+    /*     const fetchTags = async (tagIds) => {
       const tagPromises = tagIds.map(async (tagId) => {
         try {
           const response = await fetch(`http://localhost:3001/tag/${tagId}`);
@@ -28,7 +29,7 @@ function WorkTable() {
 
       return Promise.all(tagPromises);
     };
-
+ */
     const fetchData = async () => {
       try {
         const response = await fetch("http://localhost:3001/works");

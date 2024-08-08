@@ -1,0 +1,80 @@
+.work-wrapper h1{
+    margin: 10px 0 20px 0;
+    width: 70%;
+}
+
+.tags{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tags p {
+    margin: 0px 10px 10px 0;
+    padding: 7px 15px;
+    border: 0.5px solid black;
+    border-radius: 100px;
+    font-size: 14px;
+
+    /*GREEN BORDER*/
+/*     border-image: url(border.png) 30 fill;
+    border-image-slice: 30; 
+    border-image-width: 15px; 
+    border-color: none;  */
+}
+
+.work-images-image{
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.work-info{
+    margin-bottom: 50px;
+}
+
+.link{
+    text-decoration: none;
+    padding: 15px;
+    color: black;
+    border-image: url(border-black.png) 30 fill; /* Apply the border image on hover */
+    border-image-slice: 30; /* Ensure proper slicing */
+    border-image-width: 20px; /* Match the initial border width */
+    border-color: none; /* Remove the transparent border */
+}
+
+.link:hover{
+    border-image: url(border.png) 30 fill;  
+}
+
+.link-item{
+    margin-top: 40px;
+}
+@media(min-width: 780px){
+    h1{
+      font-size: 10vh; 
+    }
+  .work-wrapper{
+        display: flex;
+        justify-content: space-between;
+    } 
+    .work-info {
+        position: sticky;
+        top: 10; 
+        align-self: flex-start;
+        max-width: 60%;
+    }
+
+    .work-images {
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+        gap: 1em;
+    }
+
+    .work-images-image{
+        max-width: 46%;
+        height: fit-content;
+        margin: 0;
+    }
+}
