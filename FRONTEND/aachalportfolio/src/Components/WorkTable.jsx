@@ -58,6 +58,7 @@ function WorkTable() {
   return (
     <div className="table-container">
       <h2>Selected works</h2>
+      <div className="border-bottom top"></div>
       <table className="table">
         <tbody>
           {works.length > 0 ? (

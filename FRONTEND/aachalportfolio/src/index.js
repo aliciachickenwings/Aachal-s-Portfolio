@@ -5,6 +5,7 @@ import Home from './Pages/Home';
 import Aboutme from './Pages/Aboutme';
 import Archive from './Pages/Archive';
 import Contact from './Pages/Contact';
+import WorkDetail from './Pages/WorkDetail';
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: '/contact',
     element: <Contact/>
+  },
+  {
+    path: '/work/:id',
+    element: <WorkDetail /> // Add this route for work detail
   }
 
 ]);
