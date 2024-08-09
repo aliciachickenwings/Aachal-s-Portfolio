@@ -17,23 +17,9 @@ h1 {
   font-weight: 100;
 }
 
-.deco-images {
-  position: absolute; /* Ensure it's positioned relative to the outer-wrapper */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden; /* Hide overflow for the images */
-}
 
-.flower {
-  width: 100px; /* Adjust size if needed */
-  position: absolute;
-  z-index: -1; /* Ensure flowers are behind other content */
-}
-
-.gradient {
-  width: 100%; /* Ensure full width for gradients */
-  position: absolute;
-  z-index: -2; /* Ensure gradients are behind flowers */
+@media(min-width: 780px){
+  h1{
+    font-size: 7vw;
+  }
 }

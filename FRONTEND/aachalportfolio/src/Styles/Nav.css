@@ -31,7 +31,7 @@
 }
 
 .toggle-button{
-    position: absolute;
+    position: fixed;
     top: 1.00rem;
     right: 5%;
     display: flex;
@@ -79,6 +79,10 @@
 }
 
 @media(min-width: 780px){
+
+    .nav-wrapper{
+        padding-right: 20px;
+    }
     .toggle-button{
         display: none;
     }
@@ -88,6 +92,8 @@
         flex-direction: row;
         justify-content: end;
         background-color: transparent;
+        padding-top: 10px;
+        margin-right: 20px;
     }
 
     .nav-elements.active{

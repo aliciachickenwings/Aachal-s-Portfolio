@@ -1,5 +1,6 @@
 import "../Styles/Nav.css";
 import { useRef, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Nav() {
   const [isActive, setIsActive] = useState(false);
@@ -7,6 +8,15 @@ function Nav() {
   const toggleNavbar = () => {
     console.log("clicked on toggle");
     setIsActive(!isActive);
+  };
+
+  const handleWorkClick = () => {
+    document
+      .getElementById("table-container")
+      .scrollIntoView({ behavior: "smooth" });
+    if (window.innerWidth < 780) {
+      toggleNavbar(); // This will close the navbar after clicking "WORK"
+    }
   };
 
   return (
@@ -26,9 +36,9 @@ function Nav() {
         <a href="/aboutme">
           <p>ABOUT ME</p>
         </a>
-        <a href="/work">
+        <Link to="/" onClick={handleWorkClick}>
           <p>WORK</p>
-        </a>
+        </Link>
         <a href="/archive">
           <p>ARCHIVE</p>
         </a>

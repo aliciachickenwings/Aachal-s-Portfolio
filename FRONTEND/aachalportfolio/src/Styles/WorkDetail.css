@@ -1,5 +1,5 @@
 .work-wrapper h1{
-    margin: 10px 0 20px 0;
+    margin: 80px 0 20px 0;
     width: 70%;
 }
 
@@ -50,7 +50,7 @@
     margin-top: 40px;
 }
 @media(min-width: 780px){
-    h1{
+    .work-wrapper h1{
       font-size: 10vh; 
     }
   .work-wrapper{
@@ -61,7 +61,7 @@
         position: sticky;
         top: 10; 
         align-self: flex-start;
-        max-width: 60%;
+        max-width: 47%;
     }
 
     .work-images {
@@ -69,11 +69,11 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: end;
-        gap: 1em;
+        gap: 0.5em;
     }
 
     .work-images-image{
-        max-width: 46%;
+        max-width: 350px;
         height: fit-content;
         margin: 0;
     }

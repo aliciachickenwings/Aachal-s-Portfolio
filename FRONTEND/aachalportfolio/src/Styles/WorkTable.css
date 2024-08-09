@@ -46,11 +46,32 @@
   }
   
   @media (min-width: 780px) {
+
+
     .work-img {
       display: none;
+      width: 20%;
+    }
+
+    .work-img-hover {
+      display: block;
+      pointer-events: none; /* Prevent image from blocking other hover effects */
+      width: 300px; /* Adjust size as needed */
+      height: auto;
+      transform: translate(-50%, -50%);
+    }
+    
+    /* Optional: Add a transition effect */
+    .work-img-hover {
+      transition: opacity 0.3s ease;
     }
     .work-item-info {
+      align-items: center;
       padding-bottom: 12px;
+    }
+
+    .work-item-info h2{
+      margin: 0;
     }
 
     .border-bottom{
