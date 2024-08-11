@@ -10,11 +10,10 @@ const DecoImages = () => {
   return (
     <div className="deco-images">
       <img
-        className="flower"
+        className="flower-two"
         src={flowerDgreen}
         alt="flower"
         style={{
-          width: "30%",
           position: "absolute",
           top: "50px",
           left: "10px",
@@ -24,7 +23,7 @@ const DecoImages = () => {
         className="flower"
         src={flowerDpink}
         alt="flower"
-        style={{ position: "absolute", top: "130px", right: "-20px" }}
+        style={{ position: "absolute", top: "250px", right: "-20px" }}
       />
       <img
         className="flower"
@@ -39,26 +38,14 @@ const DecoImages = () => {
         style={{ position: "absolute", top: "600px", right: "-20px" }}
       />
       <img
-        className="gradient"
+        className="gradient gradient-green"
         src={gradientGreen}
         alt="gradient"
-        style={{
-          width: "100%",
-          position: "absolute",
-          top: "-150px",
-          right: "-220px",
-        }}
       />
       <img
-        className="gradient"
+        className="gradient gradient-pink"
         src={gradientPink}
         alt="gradient"
-        style={{
-          width: "100%",
-          position: "absolute",
-          top: "150px",
-          left: "-290px",
-        }}
       />
     </div>
   );

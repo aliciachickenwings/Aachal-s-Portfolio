@@ -15,6 +15,10 @@
   tr:hover{
     cursor: pointer;
   }
+
+  .table-title{
+    margin: 0;
+  }
   .work-item {
     width: 100%;
     padding-top: 20px;
@@ -42,7 +46,21 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items:baseline;
     margin-top: 12px;
+  }
+
+  .work-item-info h2{
+    margin: 0;
+  }
+  
+  .work-img-hover {
+    display: block !important;
+    position: relative; /* Reset position to relative or static */
+    left: auto;
+    top: auto;
+    z-index: auto;
+    width: 100%; /* Make the image responsive */
   }
   
   @media (min-width: 780px) {
@@ -59,12 +77,9 @@
       width: 300px; /* Adjust size as needed */
       height: auto;
       transform: translate(-50%, -50%);
-    }
-    
-    /* Optional: Add a transition effect */
-    .work-img-hover {
       transition: opacity 0.3s ease;
     }
+    
     .work-item-info {
       align-items: center;
       padding-bottom: 12px;
@@ -82,5 +97,9 @@
     .border-bottom.top{
         margin-bottom: 0px;
       }
+
+    .table-title{
+      margin-bottom: 10px;
+    }
   }
   

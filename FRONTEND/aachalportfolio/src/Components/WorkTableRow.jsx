@@ -1,5 +1,5 @@
 import { getMainImage } from "../utils.js";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Styles/WorkTable.css";
 
@@ -9,21 +9,34 @@ const WorkTableRow = ({ id, name, year, tags, mainTag }) => {
 
   const [hovered, setHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 780);
 
   const clickOnWork = (id) => {
     navigate(`/work/${id}`);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth > 780);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const handleMouseEnter = () => {
-    setHovered(true);
+    if (isLargeScreen) setHovered(true);
   };
 
   const handleMouseMove = (e) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
+    if (isLargeScreen) setMousePosition({ x: e.clientX, y: e.clientY });
   };
 
   const handleMouseLeave = () => {
-    setHovered(false);
+    if (isLargeScreen) setHovered(false);
   };
 
   return (
@@ -42,17 +55,30 @@ const WorkTableRow = ({ id, name, year, tags, mainTag }) => {
           <span>{year}</span>
         </div>
         <div className="border-bottom">
-          {hovered && (
+          {isLargeScreen ? (
+            hovered && (
+              <img
+                id={`main-img-${id}`}
+                className="work-img-hover"
+                src={imgPath}
+                alt={name}
+                style={{
+                  position: "fixed", // Use fixed to avoid clipping,
+                  left: mousePosition.x + 200,
+                  top: mousePosition.y - 70,
+                  zIndex: 1000,
+                }}
+              />
+            )
+          ) : (
             <img
               id={`main-img-${id}`}
-              className="work-img-hover"
+              className="work-img-normal"
               src={imgPath}
               alt={name}
               style={{
-                position: "fixed", // Use fixed to avoid clipping,
-                left: mousePosition.x + 200,
-                top: mousePosition.y - 50,
-                zIndex: 1000,
+                display: "block",
+                width: "100%", // Adjust as needed
               }}
             />
           )}

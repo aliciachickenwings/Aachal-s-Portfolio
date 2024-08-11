@@ -58,7 +58,7 @@ function WorkTable() {
 
   return (
     <div className="table-container" id="table-container">
-      <p>Selected works</p>
+      <p className="table-title">Selected works</p>
       <div className="border-bottom top"></div>
       <table className="table">
         <tbody>
