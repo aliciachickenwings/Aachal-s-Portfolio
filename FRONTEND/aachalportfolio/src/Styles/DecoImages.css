@@ -1,58 +1,56 @@
 .deco-images {
-    position: absolute; /* Ensure it's positioned relative to the outer-wrapper */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    height: auto;
-    z-index: -10;
-  }
-  
+  position:fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 100vh; /* Ensure full viewport height */
+  overflow-x: hidden;
+  overflow-y: visible;
+  z-index: -1; /* Adjust z-index to ensure visibility */
+}
+
+.flower {
+  width: 100px; /* Adjust size if needed */
+  position: absolute; /* Ensure flowers follow positioning rules */
+}
+
+.flower-two {
+  width: 140px;
+}
+
+.gradient {
+  width: 100%; /* Ensure full width for gradients */
+  position: absolute; /* Absolute to allow specific positioning */
+  z-index: -2; /* Ensure gradients are behind flowers */
+}
+
+.gradient-pink {
+  position: absolute;
+  top: 150px;
+  left: -290px;
+}
+
+.gradient-green {
+  top: -150px;
+  right: -220px;
+}
+
+@media(min-width: 780px) {
   .flower {
-    width: 100px; /* Adjust size if needed */
-    position: absolute;
-    z-index: -1; /* Ensure flowers are behind other content */
+    width: 150px;
   }
 
-  .flower-two{
-    width: 140px;
-  }
-  
-  .gradient {
-    width: 100%; /* Ensure full width for gradients */
-    z-index: -2; /* Ensure gradients are behind flowers */
+  .flower-two {
+    width: 200px;
   }
 
-  .gradient-pink{
-    position: absolute;
-    top: 150px;
-    left: -290px;
+  .gradient-green {
+    top: -300px;
+    right: -500px;
   }
 
-.gradient-green{
-    width: 100%;
-    position: absolute;
-    top: -150px;
-    right: -220px;
+  .gradient-pink {
+    top: 300px;
+    left: -400px;
   }
-  
-  @media(min-width: 780px){
-    .flower{
-      width: 150px;
-    }
-
-    .flower-two{
-      width: 200px;
-    }
-
-    .gradient-green{
-      top: -300px;
-      right: -500px;
-    }
-
-    .gradient-pink{
-      top: 300px;
-      left: -400px;
-    }
-  }
+}

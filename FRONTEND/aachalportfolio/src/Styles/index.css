@@ -27,6 +27,7 @@ a,p,tr,th{
   font-family: "Work Sans", sans-serif;
   font-weight: 300;
   font-size: 15px;
+  margin: 0;
 }
 
 
@@ -34,3 +35,10 @@ a,p,tr,th{
 .outer-wrapper{
   margin: 0% 5%;
 }
+
+@media(min-width: 1024px){
+  .outer-wrapper{
+    margin: 0% 7%;
+  }
+}
+

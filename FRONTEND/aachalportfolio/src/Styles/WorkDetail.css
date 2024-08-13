@@ -57,11 +57,16 @@
         display: flex;
         justify-content: space-between;
     } 
+
+    .work-info-wrapper{
+        position: sticky;
+        top: 100px;
+    }
     .work-info {
         position: sticky;
         top: 10; 
         align-self: flex-start;
-        max-width: 47%;
+        max-width: 45%;
     }
 
     .work-images {
@@ -73,7 +78,21 @@
     }
 
     .work-images-image{
-        max-width: 350px;
+        max-width: 250px;
+        height: fit-content;
+        margin: 0;
+    }
+}
+
+@media(min-width: 1024px){
+    .work-info {
+        position: sticky;
+        top: 10; 
+        align-self: flex-start;
+        max-width: 45%;
+    }
+    .work-images-image{
+        max-width: 450px;
         height: fit-content;
         margin: 0;
     }
