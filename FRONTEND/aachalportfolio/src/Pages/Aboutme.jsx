@@ -65,11 +65,12 @@ function Aboutme() {
               <div className="interests about-me">
                 <p className="about-me-title">Crocheting</p>
                 <p className="interests-description">
-                  During Covid I was really bored until I found a ball of yarn
-                  and a crochet hook in my room that I never touched. I started
-                  learning the basic stitches and never stopped since.
-                  Crocheting not only helps me relieve stress but it teaches me
-                  patience.
+                  During Covid, I stumbled upon a ball of yarn and a crochet
+                  hook that had been sitting untouched in my room. Bored and
+                  looking for something to do, I decided to learn the basic
+                  stitches—and I haven't stopped since. Crocheting has become a
+                  way for me to relieve stress, and it's also taught me the
+                  value of patience.
                 </p>
                 <a
                   href="https://www.instagram.com/coochiecrochet/"

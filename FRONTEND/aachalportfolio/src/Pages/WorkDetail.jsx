@@ -56,7 +56,8 @@ const WorkDetail = () => {
                 (work.tagDetails.some(
                   (tag) =>
                     tag.name.toLowerCase().includes("video") ||
-                    tag.name.toLowerCase().includes("motion graphics")
+                    tag.name.toLowerCase().includes("motion graphics") ||
+                    tag.name.toLowerCase().includes("animation")
                 ) ? (
                   <a
                     href={work.link}

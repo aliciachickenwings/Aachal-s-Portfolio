@@ -82,7 +82,10 @@
         height: fit-content;
         margin: 0;
     }
+
 }
+
+
 
 @media(min-width: 1024px){
     .work-info {

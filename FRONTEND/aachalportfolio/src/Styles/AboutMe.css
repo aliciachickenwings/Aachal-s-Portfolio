@@ -43,6 +43,9 @@
     flex-wrap: wrap;
 }
 
+.interests.about-me{
+    margin-bottom: 30px;
+}
 h2{
     font-size: 38px;
     margin: 15px 0;
