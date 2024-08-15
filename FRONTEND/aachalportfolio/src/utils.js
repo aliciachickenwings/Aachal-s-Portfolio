@@ -1,4 +1,5 @@
 const images = require.context('./assets/images-work', true);
+const imagesArchive = require.context('./assets/archive', true);
 
 export const getMainImage = (imageName) => {
   try {
@@ -22,6 +23,15 @@ export const getFolderImages = (folderName) => {
   return folderImages;
 };
 
+
+export const getAllArchiveImages = () => {
+  // Get all matching files in the context
+  const allFiles = imagesArchive.keys();
+
+  // Map over the files and load each one
+  return allFiles.map((fileName) => imagesArchive(fileName));
+};
+
 export const fetchTags = async (tagIds) => {
   const tagPromises = tagIds.map(async (tagId) => {
     try {
@@ -35,4 +45,16 @@ export const fetchTags = async (tagIds) => {
       return null;
     }
   });
-}
+};
+
+export const getRandomPosition = () => {
+  // Get the width and height of the viewport
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  // Generate random x and y coordinates within the viewport bounds
+  const x = Math.random() * (width - 100) + 100;
+  const y = Math.random() * (height - 100) + 100;
+
+  return { x, y };
+};

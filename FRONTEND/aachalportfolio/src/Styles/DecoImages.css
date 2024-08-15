@@ -11,7 +11,7 @@
 
 .flower {
   width: 100px; /* Adjust size if needed */
-  position: absolute; /* Ensure flowers follow positioning rules */
+  position: fixed; /* Ensure flowers follow positioning rules */
 }
 
 .flower-two {
@@ -20,12 +20,12 @@
 
 .gradient {
   width: 100%; /* Ensure full width for gradients */
-  position: absolute; /* Absolute to allow specific positioning */
+  position: fixed; /* fixed to allow specific positioning */
   z-index: -2; /* Ensure gradients are behind flowers */
 }
 
 .gradient-pink {
-  position: absolute;
+  position: fixed;
   top: 150px;
   left: -290px;
 }

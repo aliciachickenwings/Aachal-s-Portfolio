@@ -40,7 +40,7 @@ app.get('/works', async (req, res) => {
     const allWorks = await coll.find({}).toArray();
     res.status(200).send({
       status: 'OK request',
-      message: 'got all markers',
+      message: 'got all works',
       data: allWorks
     });
   } catch (err) {
@@ -159,5 +159,20 @@ app.get('/tag/:id', async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).send('Error fetching tag: ' + err);
+  }
+});
+
+app.get('/archive', async (req, res) => {
+  try {
+    const coll = db.collection('Archive');
+    const archive = await coll.find({}).toArray();
+    res.status(200).send({
+      status: 'OK request',
+      message: 'got archive',
+      data: archive
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({ error: 'something went wrong', value: err });
   }
 });
