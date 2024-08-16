@@ -1,5 +1,7 @@
+
 .archive-title{
     position: absolute;
+    user-select: none
 }
 .archive-description-hovered{
     display: inline; 
@@ -8,10 +10,13 @@
     border: 1px solid black;
     background-color: #FBFAF4;
     z-index: 10;
+    user-select: none
 }
 
 .archive-wrapper-inner{
-    margin: 0 5%;
+    margin: 70px 5%;
+    width: 100%;
+    height: 100vh;
 }
 
 .archive-description-normal{
@@ -24,5 +29,6 @@
 .archive-image{
     position: absolute;
     max-width: 300px;
+    user-select: none
 }
 

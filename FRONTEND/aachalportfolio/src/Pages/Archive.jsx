@@ -30,12 +30,29 @@ function Archive() {
     setArchiveImg(images);
   }, []); // The empty dependency array ensures this effect runs only once
 
+  //DROPZONE
+  const handleDrop = (e) => {
+    e.preventDefault();
+
+    // Get the dragged answer
+    const droppedAnswer = e.dataTransfer.getData("text/plain");
+
+    console.log("dropped");
+  };
+
+  const handleDragOver = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className="wrapper">
       <Nav />
       <DecoImages></DecoImages>
 
-      <div className="archive-wrapper-inner">
+      <div
+        className="archive-wrapper-inner"
+        onDrop={(e) => handleDrop(e)}
+        onDragOver={handleDragOver}
+      >
         <div className="archive-title">
           <h2>Archive</h2>
           <p>
