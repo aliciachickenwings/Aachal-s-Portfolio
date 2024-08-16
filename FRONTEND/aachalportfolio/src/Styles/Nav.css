@@ -19,7 +19,7 @@
   }
 
   .logo-wrapper {
-    padding-top: 10px;
+    padding-top: 3px;
     position: fixed;
     top: 6px;
     z-index: 20; /* Ensure logo is on top */
@@ -121,5 +121,16 @@
 
     .nav-elements.active{
         top: 0;
+    }
+
+    .logo-wrapper {
+        padding-top: 7px;
+        position: fixed;
+        top: 6px;
+        z-index: 20; /* Ensure logo is on top */
+      }
+
+    .logo{
+        width: 54px;
     }
 }

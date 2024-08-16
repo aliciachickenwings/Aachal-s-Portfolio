@@ -53,8 +53,8 @@ export const getRandomPosition = () => {
   const height = window.innerHeight;
 
   // Generate random x and y coordinates within the viewport bounds
-  const x = Math.random() * (width - 100) + 100;
-  const y = Math.random() * (height - 100) + 100;
+  const x = Math.random() * (width - 50) + 50;
+  const y = Math.random() * (height - 200) + 200;
 
   return { x, y };
 };

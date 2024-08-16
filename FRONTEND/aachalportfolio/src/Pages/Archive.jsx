@@ -10,6 +10,7 @@ function Archive() {
   const [archive, setArchive] = useState(null);
   const [archiveImg, setArchiveImg] = useState([]);
   const [imagePos, setImgPos] = useState([]);
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 768);
 
   useEffect(() => {
     const fetchWork = async () => {
@@ -44,47 +45,72 @@ function Archive() {
     e.preventDefault();
   };
   return (
-    <div className="wrapper">
-      <Nav />
-      <DecoImages></DecoImages>
+    <div>
+      <Nav></Nav>
+      <div className="outer-wrapper">
+        <DecoImages />
 
-      <div
-        className="archive-wrapper-inner"
-        onDrop={(e) => handleDrop(e)}
-        onDragOver={handleDragOver}
-      >
-        <div className="archive-title">
-          <h2>Archive</h2>
-          <p>
-            Here you can find some other work I've made in the past year, feel
-            free to move the items around and discover my work!
-          </p>
-        </div>
-        {archive && archiveImg.length > 0 ? ( // Ensure both archive and archiveImg are loaded
-          archiveImg.map((imgPath, index) => {
-            // Extract the image file name without extension
-            const imgName = imgPath.split("/").pop().split(".")[0];
-            const correspondingWork = archive.find((work) => {
-              return work.img_name === imgName;
-            });
+        <div
+          className="archive-wrapper-inner"
+          onDrop={(e) => handleDrop(e)}
+          onDragOver={handleDragOver}
+        >
+          <div className="archive-title">
+            <h2>Archive</h2>
+            <p>
+              {isLargeScreen
+                ? "Here you can find some other work I've made in the past year, feel free to move the items around and discover my work!"
+                : "Here you can find some other work I've made in the past years."}
+            </p>
+          </div>
+          <div className="archive-img-container">
+            {archive && archiveImg.length > 0 ? (
+              archiveImg.map((imgPath, index) => {
+                // Extract the image file name without extension
+                const imgName = imgPath.split("/").pop().split(".")[0];
+                const correspondingWork = archive.find((work) => {
+                  return work.img_name === imgName;
+                });
 
-            console.log(correspondingWork, imgName);
+                console.log(correspondingWork, imgName);
 
-            return correspondingWork ? (
-              <ArchiveBlock
-                key={correspondingWork.id} // Added key prop
-                id={correspondingWork.id}
-                imagePath={imgPath}
-                imgName={imgName} // Pass image position if needed
-                description={correspondingWork.description}
-              />
+                return correspondingWork ? (
+                  isLargeScreen ? (
+                    <ArchiveBlock
+                      key={correspondingWork.id} // Added key prop
+                      id={correspondingWork.id}
+                      imagePath={imgPath}
+                      imgName={imgName}
+                      description={correspondingWork.description}
+                    />
+                  ) : (
+                    <div
+                      className="archive-img-item-mobile"
+                      key={correspondingWork.id}
+                    >
+                      <div className="archive-img-item-mobile-inner">
+                        <div>
+                          <img
+                            src={imgPath}
+                            alt={correspondingWork.description}
+                            className="archive-img-mobile"
+                          />
+                        </div>
+                        <div className="archive-description-mobile">
+                          <p>{correspondingWork.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                ) : (
+                  <div>Loading...</div>
+                );
+              })
             ) : (
               <div>Loading...</div>
-            ); // Render nothing if no matching work found
-          })
-        ) : (
-          <div>Loading...</div> // Replaced <tr> with <div>
-        )}
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );

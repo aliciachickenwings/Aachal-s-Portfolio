@@ -33,9 +33,8 @@ const WorkDetail = () => {
   return (
     <div>
       <DecoImages></DecoImages>
+      <Nav></Nav>
       <div className="outer-wrapper">
-        <Nav></Nav>
-
         <div className="work-wrapper">
           <div className="work-info">
             <h1>{work.name}</h1>

@@ -9,7 +9,7 @@ const WorkTableRow = ({ id, name, year, tags, mainTag }) => {
 
   const [hovered, setHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 780);
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 768);
 
   const clickOnWork = (id) => {
     navigate(`/work/${id}`);

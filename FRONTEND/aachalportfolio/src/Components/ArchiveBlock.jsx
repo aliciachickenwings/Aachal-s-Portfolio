@@ -9,6 +9,7 @@ const ArchiveBlock = ({ id, imagePath, imgName, description }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 780);
 
+  console.log(imgPos);
   useEffect(() => {
     const handleResize = () => setIsLargeScreen(window.innerWidth > 780);
     window.addEventListener("resize", handleResize);
