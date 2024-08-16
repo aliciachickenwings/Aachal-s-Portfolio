@@ -15,6 +15,7 @@ function Home() {
       <div className="outer-wrapper">
         <div className="big-title">
           <h1>Aachal Shrestha</h1>
+          <p>A blooming multimedia artist</p>
         </div>
         <WorkTable></WorkTable>
       </div>
