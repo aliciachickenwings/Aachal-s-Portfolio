@@ -18,6 +18,12 @@ h1 {
   font-weight: 100;
 }
 
+.down-arrow{
+  width: 20px;
+  position: absolute;
+  top: calc(100vh - 60px);
+  left: 50%;
+}
 
 @media(min-width: 780px){
   h1{
