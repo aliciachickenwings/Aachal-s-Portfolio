@@ -15,7 +15,9 @@ const WorkDetail = () => {
   useEffect(() => {
     const fetchWork = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/works/${id}`);
+        const response = await fetch(
+          `https://backend-aachal-portfolio191400.onrender.com/works/${id}`
+        );
         if (!response.ok) throw new Error("Network response was not ok");
         const result = await response.json();
         setWork(result);

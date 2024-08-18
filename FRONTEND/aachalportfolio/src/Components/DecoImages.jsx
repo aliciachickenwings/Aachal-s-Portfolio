@@ -15,7 +15,7 @@ const DecoImages = () => {
         alt="flower"
         style={{
           position: "absolute",
-          top: "50px",
+          top: "400px",
           left: "10px",
         }}
       />
@@ -29,7 +29,7 @@ const DecoImages = () => {
         className="flower"
         src={flowerPink}
         alt="flower"
-        style={{ position: "absolute", top: "400px", left: "-20px" }}
+        style={{ position: "absolute", top: "120px", left: "-50px" }}
       />
       <img
         className="flower"

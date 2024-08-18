@@ -16,7 +16,9 @@ function Archive() {
   useEffect(() => {
     const fetchWork = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/archive`);
+        const response = await fetch(
+          `https://backend-aachal-portfolio191400.onrender.com/archive`
+        );
         if (!response.ok) throw new Error("Network response was not ok");
         const result = await response.json();
         setArchive(result.data); // Assuming `data` is the correct path to your archive array
