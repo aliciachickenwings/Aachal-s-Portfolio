@@ -2,6 +2,7 @@ import "../Styles/AboutMe.css";
 import Nav from "../Components/Nav";
 import DecoImages from "../Components/DecoImages";
 import aachalFoto from "../assets/website/aachal-foto.png";
+import Footer from "../Components/Footer";
 function Aboutme() {
   return (
     <div>
@@ -109,6 +110,7 @@ function Aboutme() {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }

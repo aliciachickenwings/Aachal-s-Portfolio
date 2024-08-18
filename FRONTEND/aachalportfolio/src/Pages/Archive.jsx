@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Nav from "../Components/Nav";
 import ArchiveBlock from "../Components/ArchiveBlock";
 import DecoImages from "../Components/DecoImages";
+import Footer from "../Components/Footer";
 import { getAllArchiveImages, getRandomPosition } from "../utils";
 
 function Archive() {
@@ -45,7 +46,7 @@ function Archive() {
     e.preventDefault();
   };
   return (
-    <div>
+    <div className="footer">
       <Nav></Nav>
       <div className="outer-wrapper">
         <DecoImages />
@@ -112,6 +113,7 @@ function Archive() {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }

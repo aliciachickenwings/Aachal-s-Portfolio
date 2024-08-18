@@ -2,6 +2,7 @@ import "../Styles/WorkDetail.css";
 import { getFolderImages } from "../utils";
 import Nav from "../Components/Nav";
 import DecoImages from "../Components/DecoImages";
+import Footer from "../Components/Footer";
 
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -97,6 +98,7 @@ const WorkDetail = () => {
           {/* Render other details as needed */}
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

@@ -20,6 +20,11 @@ function Nav() {
     }
   };
 
+  const handleScrollToFooter = (e) => {
+    e.preventDefault();
+    document.getElementById("footer").scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="nav-wrapper">
       <div
@@ -37,9 +42,6 @@ function Nav() {
           </a>
         </div>
         <div className={`nav-elements ${isActive ? "active" : ""}`}>
-          <a href="/">
-            <p>HOME</p>
-          </a>
           <a href="/aboutme">
             <p>ABOUT ME</p>
           </a>
@@ -49,7 +51,7 @@ function Nav() {
           <a href="/archive">
             <p>ARCHIVE</p>
           </a>
-          <a href="/contact">
+          <a href="#footer" onClick={handleScrollToFooter}>
             <p>CONTACT</p>
           </a>
         </div>

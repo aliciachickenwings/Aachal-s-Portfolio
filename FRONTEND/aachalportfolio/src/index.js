@@ -6,6 +6,8 @@ import Aboutme from './Pages/Aboutme';
 import Archive from './Pages/Archive';
 import Contact from './Pages/Contact';
 import WorkDetail from './Pages/WorkDetail';
+import Privacy from './Pages/Privacy';
+import Legal from './Pages/Legal';
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
   {
     path: '/work/:id',
     element: <WorkDetail /> // Add this route for work detail
+  },
+  {
+    path: '/privacy',
+    element: <Privacy /> // Add this route for work detail
+  },
+  {
+    path: '/legal',
+    element: <Legal /> // Add this route for work detail
   }
 
 ]);
