@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Aachal-s-Portfolio/static/css/main.591c8666.css",
-    "main.js": "/Aachal-s-Portfolio/static/js/main.557ada53.js",
+    "main.js": "/Aachal-s-Portfolio/static/js/main.4a97e8e0.js",
     "static/media/octo-installation.gif": "/Aachal-s-Portfolio/static/media/octo-installation.c0edbd3193aaee2294c9.gif",
     "static/media/SPRINT_2_WEEK_2_VISUAL_MOVING.gif": "/Aachal-s-Portfolio/static/media/SPRINT_2_WEEK_2_VISUAL_MOVING.3989ccd72cf76d8dee6b.gif",
     "static/media/genmo.gif": "/Aachal-s-Portfolio/static/media/genmo.66635b4dba0ecbe3c29d.gif",
@@ -48,10 +48,10 @@
     "static/media/logo.png": "/Aachal-s-Portfolio/static/media/logo.0c0963508f4d63e54a42.png",
     "index.html": "/Aachal-s-Portfolio/index.html",
     "main.591c8666.css.map": "/Aachal-s-Portfolio/static/css/main.591c8666.css.map",
-    "main.557ada53.js.map": "/Aachal-s-Portfolio/static/js/main.557ada53.js.map"
+    "main.4a97e8e0.js.map": "/Aachal-s-Portfolio/static/js/main.4a97e8e0.js.map"
   },
   "entrypoints": [
     "static/css/main.591c8666.css",
-    "static/js/main.557ada53.js"
+    "static/js/main.4a97e8e0.js"
   ]
 }
