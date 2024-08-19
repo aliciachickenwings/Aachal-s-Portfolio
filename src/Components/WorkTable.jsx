@@ -32,7 +32,9 @@ function WorkTable() {
  */
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/works");
+        const response = await fetch(
+          "https://backend-aachal-portfolio191400.onrender.com/works"
+        );
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
