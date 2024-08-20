@@ -1,0 +1,69 @@
+{
+      {
+        "id": "66a3d23b5d9cdc828f2a44e2",
+        "name": "Dances Of Nepal",
+        "description": "For my WEB 2 class, I created a website showcasing the traditional dances of Nepal. Users can explore information about various dances and even create their own. By signing up, they can save their dance creations. The goal is to raise awareness of these traditional dances, many of which are becoming less relevant and some are even nearing extinction. Having performed traditional Nepali dances since childhood, I was surprised by the sheer number of dances that exist. This realization inspired me to focus on this topic. The website is still a prototype, so not all dances are included yet, but the general flow is established.",
+        "year": 2024,
+        "tags": [
+          "66a12967feec8f0b46b64d3b",
+          "66a22cac17630cb326e47c3a",
+          "66a1309df8cb77600e02ba43",
+          "66a22c9417630cb326e47c39"
+        ],
+        "link": "https://ehb-mct.github.io/web-2-frontend-22-23-AachalShrestha/index.html",
+        "main_tag": "WEB"
+      },
+      {
+        "id": "66b1fdfcf676b73460795dbc",
+        "name": "Majipa Lakhey",
+        "description": "The project is called 'Majipa Lakhey: The Protector.' It is an installation where visitors can discover the story of the demon dance (Majipa Lakhey). This dance is mainly performed in the capital, Kathmandu. The reason for creating this project, which is my bachelor's thesis, is the decline of various cultural aspects in Nepal. Additionally, many Nepali youth living abroad, like myself, are 'out of touch' with our culture because we did not grow up in the same environment as the youth in Nepal. The goal is to attract as many Nepali youth as possible to raise awareness of their beautiful culture and to introduce people who are not familiar with Nepal to this rich heritage.",
+        "year": 2024,
+        "tags": [
+          "66b1fcc21bdac21749d6a31f",
+          "66b1fcd81bdac21749d6a320",
+          "66bb944fc06b1920721aef95"
+        ],
+        "link": "https://youtu.be/r9eecNWFF90",
+        "main_tag": "INSTALLATION"
+      },
+      {
+        "id": "66bb87654a4b6a84a86aaefd",
+        "name": "Open Call MASK",
+        "description": "Through my college university, my classmates and I had the
+chance to participate in the 2023 MASK video mapping festival. It
+was projected on the building of the Tomas Bata University. Our
+concept was to show the evolution of bits through Mario.",
+        "year": "2023",
+        "tags": [
+          "66bb8b18c06b1920721aef93",
+          "66b1fcd81bdac21749d6a320",
+          "66a22d0017630cb326e47c3c"
+        ],
+        "link": "https://www.youtube.com/watch?v=F-dZdeqYu2E",
+        "main_tag": "PROJECTION MAPPING"
+      },
+      {
+        "id": "66bb91094a4b6a84a86aaefe",
+        "name": "Virtual Instrument",
+        "description": "During my Expert Lab class, I had the opportunity to explore a range of technologies and experiment creatively. Using Leap Motion, Ableton Live, and TouchDesigner, I developed a virtual instrument that responds to hand motions, allowing music to be played through gesture detection. Additionally, I created a version where visuals react dynamically to music played through Ableton. This work was purely experimental, without a specific concept or message—simply an exploration of what could be achieved with these tools.",
+        "year": "2023",
+        "tags": [
+          "66bb944fc06b1920721aef95",
+          "66bb947dc06b1920721aef96"
+        ],
+        "link": "https://youtu.be/I_Edp9AAblc",
+        "main_tag": "INTERACTIVE"
+      },
+      {
+        "id": "66bbb1a14a4b6a84a86aaf00",
+        "name": "Marvel Universe",
+        "description": "In one of my design classes, we were assigned to create a poster based on data provided to us. We received an Excel sheet with thousands of Marvel heroes, characters, and their attributes. Our task was to tell a story through the data, and we were supposed to design our posters in the style of a graphic designer of our choice. I decided to focus on the villains, visually highlighting their attributes. I chose to use the style of Ikko Tanaka because I admired how he uses simple geometric shapes to create impactful designs.",
+        "year": "2023",
+        "tags": [
+          "66bbb407c06b1920721aef97",
+          "66bbb420c06b1920721aef98"
+        ],
+        "main_tag": "DATAVISUALISATION"
+      }
+  }
+  

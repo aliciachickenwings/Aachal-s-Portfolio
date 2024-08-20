@@ -1,40 +1,29 @@
 import "../Styles/Archive.css";
-
 import React, { useEffect, useState } from "react";
 import Nav from "../Components/Nav";
 import ArchiveBlock from "../Components/ArchiveBlock";
 import DecoImages from "../Components/DecoImages";
 import Footer from "../Components/Footer";
-import { getAllArchiveImages, getRandomPosition } from "../utils";
+import { getAllArchiveImages } from "../utils";
+
+// Import the archive data directly from the JSON file
+import archiveData from "../data/archive.json";
 
 function Archive() {
   const [archive, setArchive] = useState(null);
   const [archiveImg, setArchiveImg] = useState([]);
-  const [imagePos, setImgPos] = useState([]);
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 768);
 
   useEffect(() => {
-    const fetchWork = async () => {
-      try {
-        const response = await fetch(
-          `https://backend-aachal-portfolio191400.onrender.com/archive`
-        );
-        if (!response.ok) throw new Error("Network response was not ok");
-        const result = await response.json();
-        setArchive(result.data); // Assuming `data` is the correct path to your archive array
-        console.log(result); // Log the result here
-      } catch (error) {
-        console.error("Error fetching work:", error);
-      }
-    };
-    fetchWork();
+    // Set the archive data from the imported JSON file
+    setArchive(archiveData);
 
-    // Fetch all images
+    // Fetch all images using a utility function
     const images = getAllArchiveImages();
     setArchiveImg(images);
   }, []); // The empty dependency array ensures this effect runs only once
 
-  //DROPZONE
+  // DROPZONE
   const handleDrop = (e) => {
     e.preventDefault();
 
@@ -47,9 +36,10 @@ function Archive() {
   const handleDragOver = (e) => {
     e.preventDefault();
   };
+
   return (
     <div className="footer">
-      <Nav></Nav>
+      <Nav />
       <div className="outer-wrapper">
         <DecoImages />
 
@@ -80,8 +70,8 @@ function Archive() {
                 return correspondingWork ? (
                   isLargeScreen ? (
                     <ArchiveBlock
-                      key={correspondingWork.id} // Added key prop
-                      id={correspondingWork.id}
+                      key={correspondingWork._id} // Added key prop
+                      id={correspondingWork._id}
                       imagePath={imgPath}
                       imgName={imgName}
                       description={correspondingWork.description}
@@ -89,7 +79,7 @@ function Archive() {
                   ) : (
                     <div
                       className="archive-img-item-mobile"
-                      key={correspondingWork.id}
+                      key={correspondingWork._id}
                     >
                       <div className="archive-img-item-mobile-inner">
                         <div>
@@ -115,7 +105,7 @@ function Archive() {
           </div>
         </div>
       </div>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 }

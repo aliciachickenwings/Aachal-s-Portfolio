@@ -1,0 +1,58 @@
+[
+    {
+        "_id": "66a12967feec8f0b46b64d3b",
+        "name": "Front-end"
+    },
+    {
+        "_id": "66a1309df8cb77600e02ba43",
+        "name": "UI"
+    },
+    {
+        "_id": "66a22c9417630cb326e47c39",
+        "name": "UX"
+    },
+    {
+        "_id": "66a22cac17630cb326e47c3a",
+        "name": "Back-End"
+    },
+    {
+        "_id": "66a22cc317630cb326e47c3b",
+        "name": "Motion Graphics"
+    },
+    {
+        "_id": "66a22d0017630cb326e47c3c",
+        "name": "Video"
+    },
+    {
+        "_id": "66b1fcc21bdac21749d6a31f",
+        "name": "Installation"
+    },
+    {
+        "_id": "66b1fcd81bdac21749d6a320",
+        "name": "Animation"
+    },
+    {
+        "id": "66bb8b18c06b1920721aef93",
+        "name": "VFX"
+    },
+    {
+        "id": "66bb8b2bc06b1920721aef94",
+        "name": "Projection Mapping"
+    },
+    {
+        "id": "66bb944fc06b1920721aef95",
+        "name": "Interactive"
+    },
+    {
+        "id": "66bb947dc06b1920721aef96",
+        "name": "TouchDesigner"
+    },
+    {
+        "id": "66bbb407c06b1920721aef97",
+        "name": "Datavisualisation"
+    },
+    {
+        "id": "66bbb420c06b1920721aef98",
+        "name": "Graphic Design"
+    }
+]

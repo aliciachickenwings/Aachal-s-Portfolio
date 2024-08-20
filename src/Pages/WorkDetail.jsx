@@ -7,28 +7,25 @@ import Footer from "../Components/Footer";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+import works from "../data/works.json";
+
 const WorkDetail = () => {
   const { id } = useParams(); // Get the work ID from the URL
   const [work, setWork] = useState(null);
   const [images, setImageFolder] = useState(null);
 
   useEffect(() => {
-    const fetchWork = async () => {
-      try {
-        const response = await fetch(
-          `https://backend-aachal-portfolio191400.onrender.com/works/${id}`
-        );
-        if (!response.ok) throw new Error("Network response was not ok");
-        const result = await response.json();
-        setWork(result);
-        console.log(result);
-        setImageFolder(getFolderImages(result.name));
-      } catch (error) {
-        console.error("Error fetching work:", error);
-      }
-    };
-    fetchWork();
+    // Find the work by ID in the imported JSON data
+    const foundWork = works.find((work) => work._id === id);
+    if (foundWork) {
+      setWork(foundWork);
+      setImageFolder(getFolderImages(foundWork.name));
+    } else {
+      console.error("Work not found");
+    }
   }, [id]);
+
+  if (!work) return <div>Loading...</div>;
 
   console.log(work);
   if (!work) return <div>Loading...</div>;
