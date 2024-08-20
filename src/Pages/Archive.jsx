@@ -6,32 +6,33 @@ import DecoImages from "../Components/DecoImages";
 import Footer from "../Components/Footer";
 import { getAllArchiveImages } from "../utils";
 
-// Import the archive data directly from the JSON file
-import archiveData from "../data/archive.json";
-
 function Archive() {
   const [archive, setArchive] = useState(null);
   const [archiveImg, setArchiveImg] = useState([]);
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 768);
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleNavbar = () => {
+    console.log("clicked on toggle");
+    setIsActive(!isActive);
+  };
 
   useEffect(() => {
-    // Set the archive data from the imported JSON file
-    setArchive(archiveData);
+    const fetchData = async () => {
+      try {
+        // Fetch archive data from the public directory
+        const response = await fetch("/data/archive.json");
+        const data = await response.json();
+        const images = getAllArchiveImages();
+        setArchiveImg(images);
+        setArchive(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-    // Fetch all images using a utility function
-    const images = getAllArchiveImages();
-    setArchiveImg(images);
-  }, []); // The empty dependency array ensures this effect runs only once
-
-  // DROPZONE
-  const handleDrop = (e) => {
-    e.preventDefault();
-
-    // Get the dragged answer
-    const droppedAnswer = e.dataTransfer.getData("text/plain");
-
-    console.log("dropped");
-  };
+    fetchData();
+  }, []);
 
   const handleDragOver = (e) => {
     e.preventDefault();
@@ -43,11 +44,7 @@ function Archive() {
       <div className="outer-wrapper">
         <DecoImages />
 
-        <div
-          className="archive-wrapper-inner"
-          onDrop={(e) => handleDrop(e)}
-          onDragOver={handleDragOver}
-        >
+        <div className="archive-wrapper-inner" onDragOver={handleDragOver}>
           <div className="archive-title">
             <h2>Archive</h2>
             <p>

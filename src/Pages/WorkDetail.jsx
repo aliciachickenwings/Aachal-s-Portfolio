@@ -7,29 +7,41 @@ import Footer from "../Components/Footer";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import works from "../data/works.json";
-
 const WorkDetail = () => {
-  const { id } = useParams(); // Get the work ID from the URL
+  const { id } = useParams();
   const [work, setWork] = useState(null);
+  const [tags, setTags] = useState([]);
   const [images, setImageFolder] = useState(null);
 
   useEffect(() => {
-    // Find the work by ID in the imported JSON data
-    const foundWork = works.find((work) => work._id === id);
-    if (foundWork) {
-      setWork(foundWork);
-      setImageFolder(getFolderImages(foundWork.name));
-    } else {
-      console.error("Work not found");
-    }
+    const fetchData = async () => {
+      try {
+        // Fetch works and tags from the public directory
+        const worksResponse = await fetch("/data/works.json");
+        const worksData = await worksResponse.json();
+        const tagsResponse = await fetch("/data/tags.json");
+        const tagsData = await tagsResponse.json();
+
+        // Find the specific work by ID
+        const foundWork = worksData.find((work) => work.id === id);
+        if (foundWork) {
+          // Map tags to their names
+          const workTags = foundWork.tags.map(
+            (tagId) =>
+              tagsData.find((tag) => tag._id === tagId) || { name: "Unknown" }
+          );
+          setWork({ ...foundWork, tags: workTags });
+          setImageFolder(getFolderImages(foundWork.name));
+        } else {
+          console.error("Work not found", id);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
   }, [id]);
-
-  if (!work) return <div>Loading...</div>;
-
-  console.log(work);
-  if (!work) return <div>Loading...</div>;
-
   return (
     <div>
       <DecoImages></DecoImages>
@@ -39,9 +51,9 @@ const WorkDetail = () => {
           <div className="work-info">
             <h1>{work.name}</h1>
             <div className="tags">
-              {work.tagDetails && work.tagDetails.length > 0 ? (
-                work.tagDetails.map((tag) => (
-                  <div key={tag._id} className="tag-item">
+              {work.tags && work.tags.length > 0 ? (
+                work.tags.map((tag) => (
+                  <div key={tag.id} className="tag-item">
                     <p>{tag.name}</p>
                   </div>
                 ))
@@ -51,8 +63,8 @@ const WorkDetail = () => {
             </div>
             <p>{work.description}</p>
             <div className="link-item">
-              {work.tagDetails &&
-                (work.tagDetails.some(
+              {work.tags &&
+                (work.tags.some(
                   (tag) =>
                     tag.name.toLowerCase().includes("video") ||
                     tag.name.toLowerCase().includes("motion graphics") ||
@@ -66,7 +78,7 @@ const WorkDetail = () => {
                   >
                     Watch Video
                   </a>
-                ) : work.tagDetails.some(
+                ) : work.tags.some(
                     (tag) =>
                       tag.name.toLowerCase().includes("web") ||
                       tag.name.toLowerCase().includes("front-end")

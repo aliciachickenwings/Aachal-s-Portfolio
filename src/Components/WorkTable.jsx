@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import WorkTableRow from "./WorkTableRow";
 import "../Styles/WorkTable.css";
-import { fetchTags } from "../utils";
 
 function WorkTable() {
-  const [isActive, setIsActive] = useState(false);
   const [works, setWorks] = useState([]);
+  const [tags, setTags] = useState([]);
+  const [isActive, setIsActive] = useState(false);
 
   const toggleNavbar = () => {
     console.log("clicked on toggle");
@@ -13,41 +13,27 @@ function WorkTable() {
   };
 
   useEffect(() => {
-    /*     const fetchTags = async (tagIds) => {
-      const tagPromises = tagIds.map(async (tagId) => {
-        try {
-          const response = await fetch(`http://localhost:3001/tag/${tagId}`);
-          if (!response.ok) {
-            throw new Error("Network response was not ok");
-          }
-          return response.json();
-        } catch (error) {
-          console.error("There was a problem with the fetch operation:", error);
-          return null;
-        }
-      });
-
-      return Promise.all(tagPromises);
-    };
- */
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          "https://backend-aachal-portfolio191400.onrender.com/works"
-        );
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const result = await response.json();
-        const worksWithTags = await Promise.all(
-          result.data.map(async (work) => {
-            const tags = await fetchTags(work.tags);
-            return { ...work, tags };
-          })
-        );
+        // Fetch works and tags from the public directory
+        const worksResponse = await fetch("/data/works.json");
+        const worksData = await worksResponse.json();
+        const tagsResponse = await fetch("/data/tags.json");
+        const tagsData = await tagsResponse.json();
+
+        // Map tags to their names for each work
+        const worksWithTags = worksData.map((work) => {
+          const workTags = work.tags.map(
+            (tagId) =>
+              tagsData.find((tag) => tag._id === tagId) || { name: "Unknown" }
+          );
+          return { ...work, tags: workTags };
+        });
+
         setWorks(worksWithTags);
+        setTags(tagsData); // Set tags if needed elsewhere
       } catch (error) {
-        console.error("There was a problem with the fetch operation:", error);
+        console.error("Error fetching data:", error);
       }
     };
 
@@ -55,7 +41,7 @@ function WorkTable() {
   }, []);
 
   useEffect(() => {
-    console.log("Final array with all works and tags:", works);
+    console.log("Final array with all works:", works);
   }, [works]);
 
   return (
@@ -67,8 +53,8 @@ function WorkTable() {
           {works.length > 0 ? (
             works.map((work) => (
               <WorkTableRow
-                key={work._id}
-                id={work._id}
+                key={work.id} // Ensure this matches the key in your JSON
+                id={work.id}
                 name={work.name}
                 year={work.year}
                 tags={work.tags}
