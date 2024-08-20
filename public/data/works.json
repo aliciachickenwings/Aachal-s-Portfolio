@@ -1,4 +1,4 @@
-{
+[
       {
         "id": "66a3d23b5d9cdc828f2a44e2",
         "name": "Dances Of Nepal",
@@ -29,10 +29,7 @@
       {
         "id": "66bb87654a4b6a84a86aaefd",
         "name": "Open Call MASK",
-        "description": "Through my college university, my classmates and I had the
-chance to participate in the 2023 MASK video mapping festival. It
-was projected on the building of the Tomas Bata University. Our
-concept was to show the evolution of bits through Mario.",
+        "description": "Through my college university, my classmates and I had the chance to participate in the 2023 MASK video mapping festival. It was projected on the building of the Tomas Bata University. Our concept was to show the evolution of bits through Mario.",
         "year": "2023",
         "tags": [
           "66bb8b18c06b1920721aef93",
@@ -65,5 +62,5 @@ concept was to show the evolution of bits through Mario.",
         ],
         "main_tag": "DATAVISUALISATION"
       }
-  }
+      ]
   
