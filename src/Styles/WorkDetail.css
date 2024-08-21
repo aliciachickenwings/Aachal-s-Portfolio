@@ -1,5 +1,5 @@
 .work-wrapper h1{
-    margin: 80px 0 20px 0;
+    margin: 40px 0 20px 0;
     width: 70%;
 }
 
@@ -49,6 +49,14 @@
 .link-item{
     margin-top: 40px;
 }
+
+.go-back-button {
+    margin-top: 100px;
+  }
+  .go-back-button img{
+    width: 30px;
+    transform: rotate(90deg);
+  }
 @media(min-width: 780px){
     .work-wrapper h1{
       font-size: 10vh; 

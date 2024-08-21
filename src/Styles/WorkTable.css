@@ -18,7 +18,7 @@
 
   .table-title{
     margin: 0;
-    padding: 50px 0 10px 0;
+    padding: 70px 0 10px 0;
   }
   .work-item {
     width: 100%;
@@ -49,6 +49,7 @@
     justify-content: space-between;
     align-items:baseline;
     margin-top: 12px;
+    gap: 12px ;
   }
 
   .work-item-info h2{
@@ -63,6 +64,7 @@
     z-index: auto;
     width: 100%; /* Make the image responsive */
   }
+
   
   @media (min-width: 780px) {
 
@@ -101,6 +103,10 @@
 
     .table-title{
       margin-bottom: 10px;
+    }
+
+    .work-item-info:hover{
+      color: #9FB791;
     }
   }
   

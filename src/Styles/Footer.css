@@ -6,8 +6,11 @@
 
 }
 
+.footer-inner-wrapper{
+    padding: 5% 5%;
+}
+
 .footer-wrapper-inner{
-    padding: 2% 5%;
     display: flex;
     gap: 18px;
     flex-wrap: wrap;
@@ -15,9 +18,15 @@
     justify-content: space-between;
 }
 
+
+
 .footer-wrapper-inner :last-child {
     display: flex;
-    gap: 10px;
+    gap: 20px;
+}
+
+.footer-item{
+    margin-bottom: 10px;
 }
 
 .footer-contact div{
@@ -41,4 +50,8 @@
 
 .legal a:hover{
     border-bottom: 1px solid black;
+}
+
+.copywright{
+    margin-top: 20px;
 }

@@ -108,6 +108,34 @@ function Aboutme() {
               </div>
             </div>
           </div>
+          <div className="interests-wrapper about-me-block-wrapper">
+            <h2>Special mentions</h2>
+            <p className="about-me-block-description">
+              Every year, the second-year students in our program organize an
+              award show where both the public and professors select the
+              winners.
+            </p>
+            <div className="interests-wrapper-inner about-me-block-wrapper-inner">
+              <div className="interests about-me">
+                <p className="about-me-title">Impact award</p>
+                <p className="interests-description">
+                  For my bachelor’s work, I received the "Impact Award," which
+                  is presented to a final-year project that stands out for its
+                  societal relevance and its aim to make a difference in the
+                  perception of a social issue. Through an original and
+                  innovative multimedia approach, the winner successfully
+                  astonishes the audience and leaves a lasting impression.
+                </p>
+              </div>
+              <div className="interests about-me">
+                <p className="about-me-title">Young Potential award</p>
+                <p>
+                  An award I received in my first year. This award was given to
+                  one the best first year projects.{" "}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <Footer></Footer>

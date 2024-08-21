@@ -3,6 +3,7 @@ import { getFolderImages } from "../utils";
 import Nav from "../Components/Nav";
 import DecoImages from "../Components/DecoImages";
 import Footer from "../Components/Footer";
+import goBackButton from "../assets/website/down-arrow.png";
 
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -51,6 +52,11 @@ const WorkDetail = () => {
       <DecoImages />
       <Nav />
       <div className="outer-wrapper">
+        <div className="go-back-button">
+          <a href="/">
+            <img src={goBackButton}></img>
+          </a>
+        </div>
         <div className="work-wrapper">
           {work ? (
             <>
