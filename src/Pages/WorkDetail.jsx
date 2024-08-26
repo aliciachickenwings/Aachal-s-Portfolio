@@ -33,6 +33,7 @@ const WorkDetail = () => {
             (tagId) =>
               tagsData.find((tag) => tag._id === tagId) || { name: "Unknown" }
           );
+          console.log(workTags);
           setWork({ ...foundWork, tags: workTags });
           setImageFolder(getFolderImages(foundWork.name));
           console.log("Work found:", foundWork);

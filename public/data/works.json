@@ -2,13 +2,13 @@
       {
         "id": "66a3d23b5d9cdc828f2a44e2",
         "name": "Dances Of Nepal",
-        "description": "For my WEB 2 class, I created a website showcasing the traditional dances of Nepal. Users can explore information about various dances and even create their own. By signing up, they can save their dance creations. The goal is to raise awareness of these traditional dances, many of which are becoming less relevant and some are even nearing extinction. Having performed traditional Nepali dances since childhood, I was surprised by the sheer number of dances that exist. This realization inspired me to focus on this topic. The website is still a prototype, so not all dances are included yet, but the general flow is established.",
+        "description": "For my WEB 2 class, I developed a prototype website dedicated to showcasing the traditional dances of Nepal. The site allows users to explore detailed information about various dances and even create and save their own dance routines. By signing up, users can preserve their dance creations. The website aims to raise awareness about these traditional dances, many of which are becoming less relevant and are at risk of fading into obscurity. Having performed traditional Nepali dances since childhood, I was amazed by the diversity and number of dances that exist in Nepal. This realization inspired me to focus on preserving and promoting these cultural treasures through my project. The website I created is still a prototype, and while it doesn’t yet include all dances, it effectively establishes the general flow and structure.\n\nMy approach combines my personal passion for these dances with my technical skills in web development, using tools like MapBox.js to display the map and highlight the various dance locations. I also took a hands-on approach by photographing dancers, ensuring an authentic and correct representation of the dances and their origins (is this less than 1000 characters?",
         "year": 2024,
         "tags": [
-          "66a12967feec8f0b46b64d3b",
-          "66a22cac17630cb326e47c3a",
-          "66a1309df8cb77600e02ba43",
-          "66a22c9417630cb326e47c39"
+          "1",
+          "4",
+          "2",
+          "3"
         ],
         "link": "https://ehb-mct.github.io/web-2-frontend-22-23-AachalShrestha/index.html",
         "main_tag": "WEB"
@@ -16,12 +16,13 @@
       {
         "id": "66b1fdfcf676b73460795dbc",
         "name": "Majipa Lakhey",
-        "description": "The project is called 'Majipa Lakhey: The Protector.' It is an installation where visitors can discover the story of the demon dance (Majipa Lakhey). This dance is mainly performed in the capital, Kathmandu. The reason for creating this project, which is my bachelor's thesis, is the decline of various cultural aspects in Nepal. Additionally, many Nepali youth living abroad, like myself, are 'out of touch' with our culture because we did not grow up in the same environment as the youth in Nepal. The goal is to attract as many Nepali youth as possible to raise awareness of their beautiful culture and to introduce people who are not familiar with Nepal to this rich heritage.",
+        "description": "The project, 'Majipa Lakhey: The Protector,' is an immersive installation that allows visitors to explore the story of the Majipa Lakhey, a demon dance deeply rooted in the cultural traditions of Kathmandu, Nepal. This dance, traditionally performed in the capital, is not just a performance but a significant cultural symbol. My inspiration for this project, which served as my bachelor's thesis, stemmed from the observed decline in various cultural practices in Nepal, coupled with the sense of cultural disconnection experienced by Nepali youth living abroad, including myself. The installation aims to engage this younger generation and raise awareness of Nepal's rich cultural heritage, while also introducing these traditions to a global audience unfamiliar with Nepalese culture. \n\nTo create an engaging experience, I combined traditional storytelling with interactive technology. I used After Effects to craft a puppet-style animation, projected onto transparent fabric to evoke the myth's dreamlike quality. This technique draws from Nepal’s tradition of using puppetry in storytelling. The interactive demon dance was brought to life in Unity, with motion capture ensuring authenticity. I chose TouchDesigner and Kinect to make the demon reactive, enhancing the user's engagement by simulating a real-time response. The integration of a virtual instrument allowed visitors to interact with the traditional music of the dance. This blend of old and new was deliberate, aiming to make the cultural narrative both immersive and accessible, particularly for Nepali youth abroad who, like myself, may feel distanced from their heritage. ",
         "year": 2024,
         "tags": [
-          "66b1fcc21bdac21749d6a31f",
-          "66b1fcd81bdac21749d6a320",
-          "66bb944fc06b1920721aef95"
+          "7",
+          "8",
+          "11",
+          "5"
         ],
         "link": "https://youtu.be/r9eecNWFF90",
         "main_tag": "INSTALLATION"
@@ -29,26 +30,26 @@
       {
         "id": "66bb87654a4b6a84a86aaefd",
         "name": "Open Call MASK",
-        "description": "Through my college university, my classmates and I had the chance to participate in the 2023 MASK video mapping festival. It was projected on the building of the Tomas Bata University. Our concept was to show the evolution of bits through Mario.",
+        "description": "During my college studies, my classmates and I had the opportunity to participate in the 2023 MASK Video Mapping Festival, which featured projections on the Tomas Bata University building. Our project focused on illustrating the evolution of digital bits through the character of Mario.\n\nTo bring our concept to life, we used After Effects for the overall animation. For animating Mario’s movements, such as running and jumping, we employed a sprite-based approach. We utilized images of the building as references to align our animations accurately. Additionally, we created assets like ladders using Illustrator.",
         "year": "2023",
         "tags": [
-          "66bb8b18c06b1920721aef93",
-          "66b1fcd81bdac21749d6a320",
-          "66a22d0017630cb326e47c3c"
+          "9",
+          "10",
+          "8"
         ],
         "link": "https://www.youtube.com/watch?v=F-dZdeqYu2E",
         "main_tag": "PROJECTION MAPPING"
       },
       {
         "id": "66bb91094a4b6a84a86aaefe",
-        "name": "Virtual Instrument",
-        "description": "During my Expert Lab class, I had the opportunity to explore a range of technologies and experiment creatively. Using Leap Motion, Ableton Live, and TouchDesigner, I developed a virtual instrument that responds to hand motions, allowing music to be played through gesture detection. Additionally, I created a version where visuals react dynamically to music played through Ableton. This work was purely experimental, without a specific concept or message—simply an exploration of what could be achieved with these tools.",
+        "name": "Digital Fertility",
+        "description": "What effects do our phones have on the fertility of women?This question guided my exploration in the Generative Motion class. Through various animal studies, researchers have observed different impacts of phone radiation on female fertility, which could potentially affect humans as well. In my project, I investigated these potential effects and their implications.\n The final visual is a point cloud model shaped like a uterus, constructed from images of flowers. Flowers have historically symbolized female sexuality in many cultures, making them a fitting medium for this representation. Given the lack of readily available data such as APIs or CSV files, I analyzed various studies on animal fertility and integrated their findings into my work. I used Agisoft Metashape to create the point cloud from numerous photographs.\n To dynamically illustrate the impact of phone usage, I employed YOLOv5 for phone detection via webcam. This data was sent through OSC to TouchDesigner, which triggered different effects based on the duration of the phone’s presence. The intensity of these effects correlates with the duration, mirroring how prolonged phone proximity could potentially influence fertility and related issues.",
         "year": "2023",
         "tags": [
-          "66bb944fc06b1920721aef95",
-          "66bb947dc06b1920721aef96"
+          "12",
+          "13",
+          "11"
         ],
-        "link": "https://youtu.be/I_Edp9AAblc",
         "main_tag": "INTERACTIVE"
       },
       {
@@ -57,8 +58,8 @@
         "description": "In one of my design classes, we were assigned to create a poster based on data provided to us. We received an Excel sheet with thousands of Marvel heroes, characters, and their attributes. Our task was to tell a story through the data, and we were supposed to design our posters in the style of a graphic designer of our choice. I decided to focus on the villains, visually highlighting their attributes. I chose to use the style of Ikko Tanaka because I admired how he uses simple geometric shapes to create impactful designs.",
         "year": "2023",
         "tags": [
-          "66bbb407c06b1920721aef97",
-          "66bbb420c06b1920721aef98"
+          "14",
+          "13"
         ],
         "main_tag": "DATAVISUALISATION"
       }

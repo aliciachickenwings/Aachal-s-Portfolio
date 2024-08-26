@@ -25,6 +25,7 @@ function Archive() {
         const data = await response.json();
         const images = getAllArchiveImages();
         setArchiveImg(images);
+        console.log("all imgs", images);
         setArchive(data);
       } catch (error) {
         console.error("Error fetching data:", error);

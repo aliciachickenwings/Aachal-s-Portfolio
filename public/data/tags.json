@@ -1,58 +1,58 @@
 [
     {
-        "_id": "66a12967feec8f0b46b64d3b",
+        "_id": "1",
         "name": "Front-end"
     },
     {
-        "_id": "66a1309df8cb77600e02ba43",
+        "_id": "2",
         "name": "UI"
     },
     {
-        "_id": "66a22c9417630cb326e47c39",
+        "_id": "3",
         "name": "UX"
     },
     {
-        "_id": "66a22cac17630cb326e47c3a",
+        "_id": "4",
         "name": "Back-End"
     },
     {
-        "_id": "66a22cc317630cb326e47c3b",
+        "_id": "5",
         "name": "Motion Graphics"
     },
     {
-        "_id": "66a22d0017630cb326e47c3c",
+        "_id": "6",
         "name": "Video"
     },
     {
-        "_id": "66b1fcc21bdac21749d6a31f",
+        "_id": "7",
         "name": "Installation"
     },
     {
-        "_id": "66b1fcd81bdac21749d6a320",
+        "_id": "8",
         "name": "Animation"
     },
     {
-        "id": "66bb8b18c06b1920721aef93",
+        "_id": "9",
         "name": "VFX"
     },
     {
-        "id": "66bb8b2bc06b1920721aef94",
+        "_id": "10",
         "name": "Projection Mapping"
     },
     {
-        "id": "66bb944fc06b1920721aef95",
+        "_id": "11",
         "name": "Interactive"
     },
     {
-        "id": "66bb947dc06b1920721aef96",
+        "_id": "12",
         "name": "TouchDesigner"
     },
     {
-        "id": "66bbb407c06b1920721aef97",
+        "_id": "13",
         "name": "Datavisualisation"
     },
     {
-        "id": "66bbb420c06b1920721aef98",
+        "_id": "14",
         "name": "Graphic Design"
     }
 ]

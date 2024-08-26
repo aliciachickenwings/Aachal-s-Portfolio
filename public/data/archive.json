@@ -6,8 +6,13 @@
     },
     {
         "id": "66bdd5d6ae640817566e9cef",
-        "img_name": "genmo",
-        "description": "An interactive visual created to illustrate the effects of electromagnetic radiation on women's fertility."
+        "img_name": "sprint-2-sitar",
+        "description": "A 'virtual' instrument created using Leap Motion, Ableton Live and TouchDesigner."
+    },
+    {
+        "id": "66bdd5d6ae640817543e5cdg",
+        "img_name": "sprint-2-visual",
+        "description": "A visual that reacts to music coming from Ableton Live and hand movements. Made using Ableton Live, Leap Motion and TouchDesigner"
     },
     {
         "id": "66bdd604ae640817566e9cf0",

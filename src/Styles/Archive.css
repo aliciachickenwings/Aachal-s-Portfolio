@@ -47,7 +47,7 @@
 @media(min-width: 768px) {
     .archive-wrapper-inner{
         height: 100%;
-        overflow: hidden;
+        overflow: visible !important;
      }
     .archive-title{
         position: absolute;
