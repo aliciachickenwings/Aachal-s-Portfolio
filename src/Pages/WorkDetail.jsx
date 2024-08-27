@@ -48,6 +48,13 @@ const WorkDetail = () => {
     fetchData();
   }, [id]);
 
+  // Utility function to handle paragraph formatting
+  const formatDescriptionAsParagraphs = (text) => {
+    return text
+      .split("\n\n")
+      .map((paragraph, index) => <p key={index}>{paragraph}</p>);
+  };
+
   return (
     <div>
       <DecoImages />
@@ -55,7 +62,7 @@ const WorkDetail = () => {
       <div className="outer-wrapper">
         <div className="go-back-button">
           <a href="/">
-            <img src={goBackButton}></img>
+            <img src={goBackButton} alt="Go Back" />
           </a>
         </div>
         <div className="work-wrapper">
@@ -74,7 +81,11 @@ const WorkDetail = () => {
                     <p>No tags available</p>
                   )}
                 </div>
-                <p>{work.description}</p>
+                {work.description ? (
+                  formatDescriptionAsParagraphs(work.description)
+                ) : (
+                  <p>No description available</p>
+                )}
                 <div className="link-item">
                   {work.tags &&
                     (work.tags.some(
@@ -131,4 +142,5 @@ const WorkDetail = () => {
     </div>
   );
 };
+
 export default WorkDetail;

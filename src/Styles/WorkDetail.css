@@ -32,6 +32,9 @@
     margin-bottom: 50px;
 }
 
+.work-info p{
+    margin-bottom: 12px;
+}
 .link{
     text-decoration: none;
     padding: 15px;
