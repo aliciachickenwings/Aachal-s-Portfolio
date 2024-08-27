@@ -116,7 +116,7 @@
         right: 0;
         background-color: transparent;
         padding-top: 10px;
-        margin-right: 20px;
+        margin-right: 5%;
     }
 
     .nav-elements.active{
@@ -133,4 +133,10 @@
     .logo{
         width: 54px;
     }
+}
+
+@media(min-width: 1024px){
+  .nav-elements{
+    margin-right: 8%;
+  }
 }

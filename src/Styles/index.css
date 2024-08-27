@@ -36,9 +36,10 @@ a,p,tr,th{
   margin: 0% 5%;
 }
 
+
 @media(min-width: 1024px){
   .outer-wrapper{
-    margin: 0% 7%;
+    margin: 0% 8%;
   }
 }
 
