@@ -3,6 +3,7 @@ import Nav from "../Components/Nav";
 import DecoImages from "../Components/DecoImages";
 import aachalFoto from "../assets/website/aachal-foto.png";
 import Footer from "../Components/Footer";
+import awardImg from "../assets/website/award.jpg";
 function Aboutme() {
   return (
     <div>
@@ -57,6 +58,41 @@ function Aboutme() {
                 <p className="about-me-title">Math and Science</p>
                 <p>Sint-Guido Instituut</p>
                 <p>Sept 15 - June 21</p>
+              </div>
+            </div>
+          </div>
+          <div className="education-wrapper about-me-block-wrapper">
+            <h2>Soft(ware) skills</h2>
+            <div className="education-wrapper-inner about-me-block-wrapper-inner">
+              <div className="education about-me">
+                <p className="about-me-title">Interactive & Digital Design</p>
+                <p>
+                  - Interactive Design (TouchDesigner, Unity, Resolume,
+                  MadMapper, Unreal, Ableton Live)
+                </p>
+                <p>- Projection Mapping</p>
+                <p>- 3D Modeling & Animation (Blender, Maya)</p>
+                <p>- Front-End Development (HTML, CSS, JavaScript)</p>
+                <p>- UX/UI Design</p>
+              </div>
+              <div className="education">
+                <p className="about-me-title">Graphic & Motion Design</p>
+                <p>
+                  - Adobe Creative Cloud (Illustrator, Photoshop, Premiere Pro,
+                  After Effects)
+                </p>
+                <p>- 2D & 3D Motion Graphics</p>
+                <p>- Video Editing</p>
+                <p>- Branding</p>
+                <p>- Design Thinking</p>
+              </div>
+              <div className="education">
+                <p className="about-me-title">Soft Skills</p>
+                <p>- Creativity</p>
+                <p>- Teamwork</p>
+                <p>- Flexibility</p>
+                <p>- Problem Solving</p>
+                <p>- Adaptability</p>
               </div>
             </div>
           </div>
@@ -133,6 +169,9 @@ function Aboutme() {
                   An award I received in my first year. This award was given to
                   one the best first year projects.{" "}
                 </p>
+              </div>
+              <div className="interests about-me">
+                <img src={awardImg} />
               </div>
             </div>
           </div>

@@ -45,7 +45,7 @@ function Nav() {
           <a href="/aboutme">
             <p>ABOUT ME</p>
           </a>
-          <Link to="/" onClick={handleWorkClick}>
+          <Link to="/#table-container" onClick={handleWorkClick}>
             <p>WORK</p>
           </Link>
           <a href="/archive">

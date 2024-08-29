@@ -15,7 +15,7 @@
 
 .archive-image{
     position: absolute;
-    max-width: 300px;
+    max-height: 160px;
     user-select: none
 }
 
@@ -44,6 +44,12 @@
 .archive-img-item-mobile{
     width: 109%;
 }
+
+.interests img{
+    width: 100%;
+}
+
+
 @media(min-width: 768px) {
     .archive-wrapper-inner{
         height: 100%;
@@ -91,6 +97,9 @@
         height: 100%;
         border: 1px solid black;
     } */
-
+    .interests img{
+        max-height: 300px;
+        width: auto;
+    }
     
 }
