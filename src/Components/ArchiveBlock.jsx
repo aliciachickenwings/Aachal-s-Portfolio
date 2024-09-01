@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { getRandomPosition } from "../utils"; // Assuming you have this utility function
 
 const ArchiveBlock = ({ id, imagePath, imgName, description }) => {
@@ -9,6 +9,8 @@ const ArchiveBlock = ({ id, imagePath, imgName, description }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 780);
 
+  const draggableItem = useRef(null);
+
   console.log(imgPos);
   useEffect(() => {
     const handleResize = () => setIsLargeScreen(window.innerWidth > 780);
@@ -16,55 +18,66 @@ const ArchiveBlock = ({ id, imagePath, imgName, description }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Handle Mouse Down
-  const handleMouseDown = (e) => {
-    e.preventDefault(); // Prevent any default behavior like text selection
-    const rect = e.target.getBoundingClientRect();
-    setDragging(true);
-    setOffset({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    });
-  };
-
-  // Handle Mouse Move
-  const handleMouseMove = (e) => {
-    if (dragging) {
-      setImgPos({
-        x: e.clientX - offset.x,
-        y: e.clientY - offset.y,
-      });
-    }
-  };
-
-  // Handle Mouse Up
-  const handleMouseUp = () => {
-    setDragging(false);
-  };
-
-  useEffect(() => {
-    if (dragging) {
-      window.addEventListener("mousemove", handleMouseMove);
-      window.addEventListener("mouseup", handleMouseUp);
-    } else {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseup", handleMouseUp);
-    }
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseup", handleMouseUp);
-    };
-  }, [dragging]);
-
   // Handle Hover
-  const handleMouseEnter = () => {
+  const handleMouseEnter = (e) => {
     if (isLargeScreen) setHovered(true);
   };
 
   const handleMouseLeave = () => {
     if (isLargeScreen) setHovered(false);
   };
+
+  const handleMouseMove = (e) => {
+    if (isLargeScreen) setHovered(true);
+    setMousePosition({ x: e.pageX, y: e.pageY });
+  };
+
+  useEffect(() => {
+    if (draggableItem.current) {
+      dragElement(draggableItem.current);
+    }
+  }, []);
+
+  function dragElement(elmnt) {
+    let pos1 = 0,
+      pos2 = 0,
+      pos3 = 0,
+      pos4 = 0;
+    if (draggableItem.current) {
+      draggableItem.current.onmousedown = dragMouseDown;
+    } else {
+      elmnt.onmousedown = dragMouseDown;
+    }
+
+    function dragMouseDown(e) {
+      e = e || window.event;
+      e.preventDefault();
+      // get the mouse cursor position at startup:
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      document.onmouseup = closeDragElement;
+      // call a function whenever the cursor moves:
+      document.onmousemove = elementDrag;
+    }
+    function elementDrag(e) {
+      e = e || window.event;
+      e.preventDefault();
+      // calculate the new cursor position:
+      pos1 = pos3 - e.clientX;
+      pos2 = pos4 - e.clientY;
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      // set the element's new position:
+      elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+      elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+    }
+
+    function closeDragElement() {
+      /* stop moving when mouse button is released:*/
+      document.onmouseup = null;
+      document.onmousemove = null;
+    }
+  }
 
   return (
     <div className="archive-item">
@@ -90,11 +103,11 @@ const ArchiveBlock = ({ id, imagePath, imgName, description }) => {
         src={imagePath}
         alt={description}
         className="archive-image"
+        ref={draggableItem}
         style={{ top: imgPos.y, left: imgPos.x, position: "absolute" }}
-        onMouseDown={handleMouseDown}
         onMouseEnter={handleMouseEnter}
-        onMouseMove={(e) => setMousePosition({ x: e.clientX, y: e.clientY })}
         onMouseLeave={handleMouseLeave}
+        onMouseMove={handleMouseMove}
       />
     </div>
   );

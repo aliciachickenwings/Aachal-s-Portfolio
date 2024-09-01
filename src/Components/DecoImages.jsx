@@ -15,8 +15,8 @@ const DecoImages = () => {
         alt="flower"
         style={{
           position: "absolute",
-          top: "400px",
-          left: "10px",
+          top: "500px",
+          left: "-70px",
         }}
       />
       <img

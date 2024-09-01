@@ -53,5 +53,16 @@
         "id": "66bf64f8f4d54fcb61fdb872",
         "img_name": "green-top",
         "description": "Top crocheted using the Suzette stitch."
+    },
+    {
+        "id": "66bf64f8f4d54fcb61fdb872",
+        "img_name": "sprint-1",
+        "description": "Experiment on TouchDesigner using real-time data from the Kinect and MediaPipe to create visual effects."
+    },
+    {
+        "id": "66bf64f8f4d54fcb61fdb872",
+        "img_name": "poster-annapurna",
+        "description": "Poster made for Annapurna Brussel Club for its 10th anniversary event."
     }
+
 ]

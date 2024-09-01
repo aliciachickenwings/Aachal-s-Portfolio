@@ -57,44 +57,39 @@ function Archive() {
           <div className="archive-img-container">
             {archive && archiveImg.length > 0 ? (
               archiveImg.map((imgPath, index) => {
-                // Extract the image file name without extension
                 const imgName = imgPath.split("/").pop().split(".")[0];
                 const correspondingWork = archive.find((work) => {
                   return work.img_name === imgName;
                 });
 
-                console.log(correspondingWork, imgName);
+                if (!correspondingWork) return null; // Skip rendering if work is not found
 
-                return correspondingWork ? (
-                  isLargeScreen ? (
-                    <ArchiveBlock
-                      key={correspondingWork._id} // Added key prop
-                      id={correspondingWork._id}
-                      imagePath={imgPath}
-                      imgName={imgName}
-                      description={correspondingWork.description}
-                    />
-                  ) : (
-                    <div
-                      className="archive-img-item-mobile"
-                      key={correspondingWork._id}
-                    >
-                      <div className="archive-img-item-mobile-inner">
-                        <div>
-                          <img
-                            src={imgPath}
-                            alt={correspondingWork.description}
-                            className="archive-img-mobile"
-                          />
-                        </div>
-                        <div className="archive-description-mobile">
-                          <p>{correspondingWork.description}</p>
-                        </div>
+                return isLargeScreen ? (
+                  <ArchiveBlock
+                    key={correspondingWork._id}
+                    id={correspondingWork._id}
+                    imagePath={imgPath}
+                    imgName={imgName}
+                    description={correspondingWork.description}
+                  />
+                ) : (
+                  <div
+                    className="archive-img-item-mobile"
+                    key={correspondingWork._id}
+                  >
+                    <div className="archive-img-item-mobile-inner">
+                      <div>
+                        <img
+                          src={imgPath}
+                          alt={correspondingWork.description}
+                          className="archive-img-mobile"
+                        />
+                      </div>
+                      <div className="archive-description-mobile">
+                        <p>{correspondingWork.description}</p>
                       </div>
                     </div>
-                  )
-                ) : (
-                  <div>Loading...</div>
+                  </div>
                 );
               })
             ) : (
@@ -107,5 +102,4 @@ function Archive() {
     </div>
   );
 }
-
 export default Archive;

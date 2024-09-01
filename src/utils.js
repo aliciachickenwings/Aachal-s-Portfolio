@@ -1,5 +1,6 @@
 const images = require.context('./assets/images-work', true);
 const imagesArchive = require.context('./assets/archive', true);
+const effectImages = require.context('./assets/effect-images', true);
 
 export const getMainImage = (imageName) => {
   try {
@@ -31,6 +32,13 @@ export const getAllArchiveImages = () => {
   // Map over the files and load each one
   return allFiles.map((fileName) => imagesArchive(fileName));
 };
+
+export const getAllEffectImages = () =>{
+  const allFiles = effectImages.keys();
+
+  // Map over the files and load each one
+  return allFiles.map((fileName) => imagesArchive(fileName));
+}
 
 export const fetchTags = async (tagIds) => {
   const tagPromises = tagIds.map(async (tagId) => {
