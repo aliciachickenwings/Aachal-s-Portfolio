@@ -28,5 +28,27 @@ h1 {
 @media(min-width: 780px){
   h1{
     font-size: 7vw;
+/*     position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,); */
+  }
+
+  .effect-images{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+  }
+  .effect-images-item{
+    position: absolute;
+    width: 150px;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .effect-images-item img{
+    width: 100%;
+    height: 100%;
   }
 }
