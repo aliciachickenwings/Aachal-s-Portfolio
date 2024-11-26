@@ -48,6 +48,11 @@ function Aboutme() {
             <h2>Education</h2>
             <div className="education-wrapper-inner about-me-block-wrapper-inner">
               <div className="education about-me">
+                <p className="about-me-title">Media & Information Design</p>
+                <p>Luca School of Arts</p>
+                <p>Sept 24 - June 26</p>
+              </div>
+              <div className="education about-me">
                 <p className="about-me-title">
                   Multimedia & Creative Technologies
                 </p>
